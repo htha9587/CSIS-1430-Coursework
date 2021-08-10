@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--Image Map in HTML.-->
+<html>
+    <head>
+        <title>Utah Map</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--CSS Styles.-->
+        <style>
+            
+            body {
+                background-color: black;
+            }
+            
+            h1 { color: #ffffff; font-family: 'Lato', sans-serif; 
+                 font-size: 54px; font-weight: 300; 
+                 line-height: 58px; margin: 0 0 58px; 
+            }
+            
+            p { color: white; font-family: 'Lucida Sans', Arial, sans-serif; 
+                font-size: 16px; line-height: 26px; 
+                text-indent: 30px; margin: 0; 
+                border: 1px solid white;
+                background-color: #009999;
+            }
+            
+             a:link, a:visited {
+                background-color: purple;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-family: Verdana, sans-serif;
+            }
+
+            a:hover, a:active {
+                background-color: blue;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+    <center>
+        <!--Heading and map comment.-->
+     <h1>Utah Interactive Map</h1>
+     <p>Hover and click around the map, and you'll find interesting information.</p>
+     
+     <!--Image to be used for image map.-->
+     <img src="map.GIF" alt="Map" usemap="#utahMap">
+     
+     <!--Image map, featuring ten links to relevant web sites in the specific area.-->
+     <map name="utahMap">
+      <area shape="circle" coords="141,107,15" alt="Sun" href="http://thecomplexslc.com">
+      <area shape="circle" coords="104,74,15" alt="Mercury" href="https://utah.com/great-salt-lake-state-park">
+      <area shape="circle" coords="63,360,15" alt="Venus" href="https://www.nps.gov/zion/index.htm">
+      <area shape="circle" coords="115,341,15" alt="Sun" href="https://www.nps.gov/brca/index.htm">
+      <area shape="circle" coords="167,358,15" alt="Mercury" href="http://www.lakepowell.com/">
+      <area shape="circle" coords="310,178,15" alt="Venus" href="https://www.colorado.gov/">
+      <area shape="circle" coords="256,290,15" alt="Sun" href="https://www.nps.gov/cany/index.htm">
+      <area shape="circle" coords="202,113,15" alt="Mercury" href="http://cityofholladay.com/">
+      <area shape="circle" coords="108,378,15" alt="Venus" href="https://www.sgcity.org/">
+      <area shape="circle" coords="235,100,15" alt="Venus" href="http://www.summitpost.org/kings-peak/150376">
+     </map>
+    </center>
+    
+    <!--Link to home page.-->
+    <center>
+    <a href="http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/index_2.html">Back to Home Page</a>
+    </center>
+    
+    </body>
+</html>
