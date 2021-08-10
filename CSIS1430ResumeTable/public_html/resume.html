@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--
+My resume using HTML tables.-->
+<html>
+    <head>
+        <title>My Resume</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--CSS Styles--> 
+        <style> 
+            body {
+                text-align: center;
+                background-color: cornflowerblue;
+            }
+            
+            table,td {
+                border: 1px solid black;
+                width:50%;
+                font-family: verdana, geneva, sans-serif;
+            }
+            
+            h1 {
+                font-weight: bold;
+                font-family: verdana;
+            }
+            
+            h2 {
+                font-weight: bold;
+                font-family: verdana;
+            }
+            
+            h3 {
+                font-family: verdana, geneva, sans-serif;
+            }
+            
+            table {
+                width: 100%
+            }
+            
+            th, td {
+                padding: 5px;
+                text-align: left;
+            }
+            
+            table#t01 tr:nth-child(even) {
+                background-color: #eee;
+            }
+            
+            table#t01 tr:nth-child(odd) {
+                background-color:#fff;
+            }
+            
+            table#t01 th {
+                background-color: black;
+                color: white;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            
+            table#t02 tr:nth-child(even) {
+                background-color: #eee;
+            }
+            
+            table#t02 tr:nth-child(odd) {
+                background-color:#fff;
+            }
+            
+            table#t02 th {
+                background-color: black;
+                color: white;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            
+            table#t03 tr:nth-child(even) {
+                background-color: #eee;
+            }
+            
+            table#t03 tr:nth-child(odd) {
+                background-color:#fff;
+            }
+            
+            table#t03 th {
+                background-color: black;
+                color: white;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            
+            a:link, a:visited {
+                background-color: purple;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            a:hover, a:active {
+                background-color: blue;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+    <center>
+        <!--Information and self-serving quotes.-->
+        <h1>Harrison Thacker</h1>
+        <h2>5451 S Indian Rock RD, Holladay, UT</h2>
+        <h2>801-372-3177</h2>
+        <h3>"Persistence is how success is eventually achieved."</h3>
+        <h3>"As a developer, I'm always looking for optimal solutions."</h3>
+        <h3>"Dev teams require a good communicator."</h3>
+        <!--Title for first table.-->
+        <h1>EDUCATION</h1>
+    </center>
+    
+    <!--First table, and its information.-->
+     <table id="t01"> 
+         <tr>
+             <th>Schools Attended</th>  
+             <th>School Location</th>
+             <th>Dates Attended</th>
+             <th>Expected date for Degree</th>
+         </tr>
+         <tr>
+           <td>Hillcrest High School</td>  
+           <td>7350 900 E, Midvale, UT 84047</td>
+           <td>2013-2016</td>
+           <td>NA</td>
+         </tr>
+         <tr>
+           <td>Canyons Technical Education Center</td>
+           <td>825 E 9085 S, Sandy, UT 84094</td>
+           <td>2014-2016</td>
+           <td>NA</td>
+         </tr>
+         <tr>
+           <td>Salt Lake Community College</td>
+           <td>4600 South Redwood Road, Salt Lake City, UT 84123</td>
+           <td>2016-2017</td>
+           <td>EST: 2018</td>
+         </tr>
+     </table>
+    <center>
+        <h1>JOB EXPERIENCE</h1>
+    </center>
+    
+    <!--Job Experience Table-->
+    <table id ="t02">
+        <tr>
+            <th>Dates worked at Company</th>
+            <th>Employer</th>
+            <th>Position</th>
+        </tr>
+        <tr>
+            <td>2016-2017</td>
+            <td>Burger King</td>
+            <td>Fry Cook(Ding Fries are Done)</td>
+        </tr>
+    </table>
+    <center>
+        <h1>CAREER EXPECTATIONS</h1>
+    </center>
+    
+    <!--Career Expectations table.-->
+    <table id="t03">
+        <tr>
+            <th><img src="https://www.javatpoint.com/images/spimages/spring1.png" alt="" style="width:200px; height:auto;"></th>
+            <th>Skills</th>
+            <th>Personal Projects</th>
+        </tr>
+        <tr>
+            <td>I'm interested in Java EE/Spring Framework Software Engineer Jobs</td>
+            <td>Java/JavaFX, C/C++, HTML/CSS/Javascript, MVC, MIPS, PHP, MySQL</td>
+            <td>
+                <a href="https://github.com/htha9587/ChatbotFX/"> ChatbotFX</a>
+            </td>
+        </tr>
+    </table>
+    
+    <center>
+        <!--Links to home page, personal Github, and personal LinkedIn.-->
+     <a href="http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/index_2.html">Back to Home Page</a>
+     <a href="https://github.com/htha9587">Github</a>
+     <a href="https://www.linkedin.com/in/harrison-thacker-a290b5115">LinkedIn</a>
+    </center>
+    </body>
+</html>
