@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--
+Introduction to Javascript in CSIS 1430.
+-->
+<html>
+    <head>
+        <title>Guessing Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--CSS Styles.-->
+        <style>
+            
+            /*CSS Styles for the body and background of the game page.*/
+            body {
+                background-image: url(imageC.gif);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                background-size: cover;
+                color: white;
+                text-align: center;
+            }   
+            
+            /*CSS Styles for the web page title.*/
+            h1 {
+                font-family: Verdana, sans-serif;
+                text-decoration: underline;
+                text-shadow: 0 0 10px rgba(500,500,500,1) , 0 0 20px rgba(500,255,255,1);
+            }
+            
+            /*CSS Styles for the HTML form.*/
+            form {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            /*CSS Styles for the buttons in the HTML form.*/
+            input[type=button], input[type=submit], input[type=reset] {
+                background-color: #990099;
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-decoration: none;
+                margin: 4px 2px;
+                cursor: pointer;
+                font-family: Verdana, sans-serif;
+            }
+            
+            /*CSS Styles for the h2 header.*/
+            h2 {
+                font-family: Verdana, sans-serif;
+            }
+            
+            /*CSS Styles for the guess text field.*/
+            input[type=text] {
+                font-family: Verdana,sans-serif;
+                box-sizing: border-box;
+                margin: 8px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            
+            /*CSS Styling for the div box containing the HTML form.*/
+            div {
+                border:5px solid #000;
+                border-radius: 40px 40px 40px 40px;
+                width: 450px;
+                padding: center;
+                height: 420px;
+                margin: 440px;
+                margin-top: 20px;
+                background: rgba(100,100,100,.5);
+                margin-bottom: 10px;
+                font-family: Verdana,sans-serif;
+                font-weight: 500px;
+            }
+            
+            /*CSS Styles for the guess images.*/
+            img {
+                border-radius: 8px;
+            }
+            
+        </style>
+        
+    </head>
+    <body onLoad="initialize()">
+        <h1>Guessing Game</h1>
+        
+        <!--Beginning of HTML form.-->
+        <form name='guessForm' action="javascript:checkGuess()">
+            
+            <div>
+            Your Guess: <input type="text" name="userGuess" value="50" size="10"
+                               maxlength="2">
+            <br/><br/>
+            <img src='smile1.jpg' name='thePicture'>
+            <br/><br/>
+            <input type="button" value="Take a Guess" onClick="checkGuess()">
+            <input type='reset'  value='Reset the Form' onClick="stopInterval()">
+            <br/><br/>
+            <input type="button" value="Play Again" onClick="location = window.location.reload(true);">
+            
+        </form>
+        </div>
+            
+        <!-Javascript Code.-->
+        <script>
+           /*Variables.*/
+           var theNumber=0;
+           var thePictureNumber = 1;
+           var refreshID = 0;
+           var clearInterval = 1;
+           var message="Hello"; 
+           var name=prompt("What's your name?  ", " " );
+           document.write("<h2>" + message + " " + name + "!" + " Ready to play the game?" + "</h2>");
+           
+           /*Initializes the random guesss number.*/
+           function initialize()
+           {
+               theNumber = Math.random();
+               theNumber = theNumber * 100;
+               theNumber = Math.floor(theNumber);
+               
+               document.guessForm.userInput.focus();
+               document.guessForm.userInput.select();
+           }
+           
+           /*Changes picture depending on the number.*/
+           function changePicture()
+           {
+               if (thePictureNumber === 1)
+               document.guessForm.thePicture.src = "smile1.jpg";
+               if (thePictureNumber === 2)
+               document.guessForm.thePicture.src = "smile2.jpg";
+               if (thePictureNumber === 3)
+               document.guessForm.thePicture.src = "smile3.png";
+           thePictureNumber ++;
+           if (thePictureNumber > 3)
+               thePictureNumber = 1;
+           }
+           
+           /*Checks guess input by user.*/
+           function checkGuess()
+           {
+               var userGuess = eval(document.guessForm.userGuess.value);
+               
+               if (theNumber === userGuess)
+               {
+                   refreshID = setInterval("changePicture()", 250);
+               }
+               else
+               {
+                   if(userGuess > theNumber)
+                   {
+                       document.guessForm.thePicture.src = 'smilehigh.jpg';
+                   }
+                   else {
+                       document.guessForm.thePicture.src = 'smilelow.jpg';
+                   }
+               document.guessForm.userInput.focus();
+               document.guessForm.userInput.select();
+               }
+               document.guessForm.userInput.focus();
+               document.guessForm.userInput.select();
+           }
+        </script>  
+    </body>
+</html>
