@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--
+This is my Pizza Page, created for CSIS1430 in HTML5/CSS3.
+-->
+<html>
+    <head>
+        <!--Tab title for webpage.-->
+        <title>Papa Botulism's Pizza</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--CSS Styles.-->
+        <style>
+            
+            /*CSS Styling for the webpage background image.*/
+            body {
+                text-align: center;
+                background-image: url(pizzaBackground.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            
+            /*CSS Styling for the pizza logo image.*/
+            img.PizzaLogo {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            /*CSS Styling for the infinite pizza gif.*/
+            img.PizzaGIF {
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            
+            /*CSS Styling for the Pizza Time image.*/
+            img.Porker {
+                margin-left: auto;
+                margin-right: auto;
+                width: 300px;
+                height: 300px;
+                padding-top: 10px;
+                padding-bottom: 5px;
+            }
+            
+            /*CSS Styling for the table.*/
+            table {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            /*CSS Styling for the div box containing the HTML form.*/
+            div {
+                border:5px solid #000;
+                border-radius: 40px 40px 40px 40px;
+                width: 700px;
+                padding: center;
+                height: 1355px;
+                margin:300px;
+                margin-top: 20px;
+                background: rgba(200,200,200,.5);
+                margin-bottom: 10px;
+                font-family: Verdana,sans-serif;
+                font-weight: 500px;
+                color: white;
+            }
+            
+            /* Sets link color to blue when clicked. */
+            a:hover, a:active {
+                background-color: blue;
+            }
+            
+            /* CSS Styles for home page link. */
+            a:link, a:visited {
+                background-color: purple;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-family: Verdana, sans-serif;
+            }
+            
+            /* Style for footer. */
+            footer {
+                margin-top: 0;
+                padding: 1em;
+                color: black;
+                background-color: #9999ff;
+                clear: left;
+                text-align: center;
+            }
+            
+            /*CSS Styling for the checkbox and radio buttons.*/
+            input[type=checkbox],
+            input[type=radio] {
+                 width:20px;
+                 position: relative;
+                 display: table-cell;
+                 vertical-align: middle; 
+            }
+            
+            /*Additional CSS Styling for the checkbox.*/
+            input[type=checkbox] {
+                padding-top: -5px;
+            }
+            
+            /*CSS Styling for the checkbox/radio button labels.*/
+            label {
+                width:200px;       
+                position:relative;
+                left: -20px;
+                display:inline-block;    
+                vertical-align:middle; 
+            }           
+ 
+            /*CSS Styling for the text fields.*/
+            input [type=text] {
+                padding: 12px 20px;
+                margin: 8px 0;
+            }
+            
+            /*CSS Styling for the submit and reset buttons*/
+            input[type=button], input[type=submit], input[type=reset] {
+                background-color: purple;
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-decoration: none;
+                margin: 4px 2px;
+                cursor: pointer;
+                font-family: Verdana, sans-serif;
+            }
+           
+    
+        </style>
+    </head>
+    <body>
+        <!--Logo image.-->
+        <img  class="PizzaLogo" src="pizza_place_logo.png" alt="Logo">
+        <!--HTML form, sending data to my email.-->
+        <form name='papaForm' action="mailto:harrison.thacker69@gmail.com"
+              method="GET" enctype="text/plain">
+            
+            <!--Div box that contains HTML form elements.-->
+            <div>
+                <img  class="PizzaGIF" src="Perpetual-Pizza.gif" alt="GIF">
+                <br>
+             <input type='text' class="Name" value='Your Name'
+                         size='20' maxlength='20'>
+             <br>
+             <input type='text' value='PhoneNumber'
+                         size='20' maxlength='20'>
+             <br>
+             <input type='text' value='Email Address'
+                         size='20' maxlength='20'>
+             <br>
+             <input type='text' value='Delivery Address'
+                         size='20' maxlength='20'>
+             <br>
+             <input type='text' value='Zip Code'
+                         size='20' maxlength='20'>
+             <br>
+             <input type='text' value='City'
+                         size='20' maxlength='20'>
+             <br/><br/>
+             
+            <b>SIZES:</b>
+            <br/>
+            <center>
+                <!--Radio buttons for pizza sizes.-->
+            <input type='radio' name='pizzaSize' value='S'/> Small &nbsp;&nbsp;
+            <br>
+            <input type='radio' name='pizzaSize' value='M'/> Medium &nbsp;&nbsp;
+            <br>
+            <input type='radio' name='pizzaSize' value='L'/> Large &nbsp;&nbsp;
+            <br>
+            <input type='radio' name='pizzaSize' value='E'/> Extra Large &nbsp;&nbsp;
+            <br>
+            <input type='radio' name='pizzaSize' value='U'/> Your Own Fault &nbsp;&nbsp;
+            <br/><br/>
+            </center>
+            <b>TOPPINGS:</b>
+            <br/>
+            <table>
+                
+                <!--Checkboxes for pizza toppings.-->
+               <input type='checkbox' name='toppings' 
+                      value='PR' >
+            Anchovies
+            <br>
+            <input type="checkbox" name="toppings" value="PR">Bacon<br>
+            <input type="checkbox" name="toppings" value="PR">Garlic<br>
+            <input type="checkbox" name="toppings" value="PR">Sausage<br> 
+            <input type="checkbox" name="toppings" value="PR">Mushrooms<br> 
+            <input type="checkbox" name="toppings" value="PR">Onions<br>
+            <input type="checkbox" name="toppings" value="PR">Pepperoni<br>
+            </table>
+            <br/>
+            <b>CRUST:</b>
+            </br>
+            
+            <!--Drop down menu for pizza crust.-->
+            <select name='Crust' >
+                <option value='Thin'> Thin Crust</option>
+                <option value='Flatbread'> Flatbread</option>
+                <option value='Thick'> Thick Crust</option>
+                <option value='Focaccia'> Focaccia</option>
+                <option value='Hand Tossed'> Hand Tossed</option>
+            </select>
+            <br/><br/>
+            
+            <!--Text area for delivery instructions.-->
+            <textarea name="comments" rows="10" cols="30">Delivery Instructions</textarea>
+            <br>
+            <img  class="Porker" src="pPorker.jpg" alt="Img">
+            <br>
+            
+            <!--Submit and reset buttons.-->
+            <input type="submit" value="Place Order">
+            <input type="reset" value="Reset"
+        </form>
+        </div>
+            
+            <!--Page footer.-->
+        <footer>
+            
+            <!--Link back to home page.-->
+        <a id="footer" href="http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/index_2.html">Back to Home Page</a>
+        </footer>
+    </body>
+</html>
