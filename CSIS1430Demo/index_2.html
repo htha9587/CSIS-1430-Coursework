@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--
+This is my home page for CSIS 1430/2440. Made entirely in HTML/CSS/Javascript/Bootstrap.
+-->
+<html>
+    <head>
+        <!--Sets the tab title for the home page.-->
+        <title>Harrison Thacker</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!--CSS/Bootstrap Styles.-->
+        <style>
+            
+            /*CSS Styles for first container.*/
+            .bg-1 {
+                background: #333333;
+                color: #bdbdbd;
+            }
+            
+            /*CSS Styles for second container.*/
+            .bg-2 { 
+                background-color: #474e5d; 
+                color: #ffffff;
+            }
+            
+            /*CSS Styles for third container.*/
+            .bg-3 { 
+                background-color: #666666;
+                 color: #ffffff;
+            }
+            
+            /*CSS padding for all containers.*/
+            .container-fluid{
+                padding-top: 70px;
+                padding-bottom: 70px;
+            }
+            
+            /*CSS Styles for navbar at the top of the page.*/
+            .navbar {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                border: 0;
+                border-radius: 0;
+                margin-bottom: 0;
+                font-size: 12px;
+                font: 400 15px/1.8 Lato, sans-serif;
+                letter-spacing: 5px;
+            }
+            
+            /*CSS Styles for hovering over navbar elements.*/
+            .navbar-nav li a:hover {
+                color: #ff0000 !important;
+            }
+            
+            /*CSS Styles for fourth container.*/
+            .bg-4 {
+                background-color: #474e5d;
+                color: #ffffff;
+            }
+            
+            /*CSS Style for About text.*/
+            #About {
+                text-decoration: none;
+            }
+            
+            /*CSS Style for About header.*/
+            #AboutTitle {
+                margin-top: 50px;
+            }
+            
+            /*CSS Styles for fifth container.*/
+            .bg-5 {
+                background-color: #003333;
+                color: #ffffff;
+            }
+            
+            /*CSS Styles for sixth container.*/
+            .bg-6 {
+                background-color: #999999;
+                color: #ffffff;
+            }
+            
+            /*CSS Styles for seventh container.*/
+            .bg-7 {
+                background-color: #333333;
+                color: #ffffff;
+            }
+            
+            /*CSS Styles for the page body.*/
+            body {
+                line-height: 1.8;
+                color: #f5f6f7;
+                font: 400 15px/1.8 Lato, sans-serif;
+                font-weight: bold;
+            }
+            
+            /*Custom Styles for paragraphs.*/
+            p {
+                font-size: 16px;
+            }
+            
+            /*Custom Styles for headers.*/
+            h3 {
+                font-family: Montserrat, sans-serif;
+                text-decoration: underline;
+                font-weight: bold;
+            }
+            
+            /*CSS margin for the bottom.*/
+            .margin {
+                margin-bottom: 45px;
+            }
+            
+            /*jQuery slide animation.*/
+            .slideanim {visibility:hidden;}
+            .slide {
+             animation-name: slide;
+             -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+            }
+            
+            /*CSS styles for jQuery slide.*/
+            @keyframes slide {
+            0% {
+            opacity: 0;
+            transform: translateY(70%);
+            } 
+            100% {
+            opacity: 1;
+            transform: translateY(0%);
+            }
+           }
+           
+           /*CSS styles for slide keyframes.*/
+            @-webkit-keyframes slide {
+            0% {
+            opacity: 0;
+            -webkit-transform: translateY(70%);
+            } 
+            100% {
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+            }
+           }
+           
+           /* Styles links to look like buttons. */
+            .btn{
+                background-color: purple;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-family: Verdana, sans-serif;
+            }
+
+            /* Changes link color to blue when the mouse hovers over. */
+            .btn:hover, .btn:focus {
+                background-color: #0066cc;
+                color: #000;
+            }
+            
+            /* Styles used for unordered list elements. */
+            #List {
+                background: #cccccc;
+                padding: 5px;
+                margin-left: 35px;
+                font-family: Verdana, sans-serif;
+                text-decoration: underline;
+                color: black;
+            }
+            
+        </style>
+    </head>
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">>
+        <!--Navbar at the top of the page.-->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target =" #myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Harrison Thacker</a>
+                </div>
+                <!--Collapsable navbar with HTML bookmarks.-->
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#Resources">CSIS RESOURCES</a></li>
+                        <li><a href="http://htha9587.weebly.com">SLCC E-PORTFOLIO</a></li>
+                        <li><a href="#Courses">COURSES</a></li>
+                        
+                        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">WORK
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#1430">CSIS 1430</a></li>
+            <li><a href="#2440">CSIS 2440</a></li>
+                        <li><a href="https://github.com/htha9587">Personal Github</a></li>
+                       </ul>
+                            
+                       <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">CONTACT
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="mailto:harrison.thacker69@gmail.com">Send Mail</a></li>
+            <li><a href="https://www.linkedin.com/in/harrison-thacker-a290b5115">Personal LinkedIn</a></li>
+                    </ul>
+                                
+                      <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">REFLECTIONS
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#1430R">CSIS 1430</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!--First container.-->
+        <div class="container-fluid bg-1 text-center">
+        <h3 id='AboutTitle'>About</h3>
+        <img src="Image.jpg" class="img-responsive img-circle" style="display:inline" alt="Me" width="200" height="200">
+        <h3 id='About'>I'm a sophomore at Salt lake Community College, and am currently
+        pursuing a major in Computer Science and 
+        Information Systems. My Interests revolve around Technology,
+        (Hard)Science Fiction, and most anything cyberpunk/space related. When I'm not coding, its usually
+        those things as well as listening to Industrial/Experimental music. The kind I want to make as
+        a hobby when I'm not on the job.
+        <br> <br> My passions and persistence will lead me wherever I wish to go.
+        <br> <br> Favorite Film: Interstellar <br> Favorite Book: Assimilate: A Critical History of Industrial Music</h3>
+        </div>
+        
+        <!--Second container.-->
+        <div class="container-fluid bg-2 text-center">
+        <h3 id="Resources">CSIS Resources</h3>
+        <!--CSIS Resource Links.-->
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='https://www.slcc.edu'">SLCC Website</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='https://slcc.instructure.com/courses/422942'">Canvas Website</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://www.w3schools.com'">Course Learning Site</a>
+        </div>
+        
+        <!--Third container.-->
+        <div class="container-fluid bg-3 text-center">
+        <h3 id="Courses">Taken CSIS Courses</h3>
+        <div>
+        <!--Unordered list for prior CSIS courses.-->
+    <ul class="Courses" id="List">
+      <li>CSIS 1400</li>
+      <li>CSIS 1410</li> 
+      <li>CSIS 2420</li> 
+      <li>CSIS 2430</li> 
+      <li>CSIS 2810</li>  
+    </ul>    
+    </div>
+        
+        <!--Fourth container.-->
+        <div class="container-fluid bg-4 text-center">
+        <h3 id="1430">CSIS 1430 Work</h3>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/resume/resume17/resume.html'">Resume</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/map/map.html'">Utah Image Map</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/myBoxes.html'">My Little Boxes</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/pizzaPlace.html'">Pizza Place</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/guessingGame/guessingGame.html'">Guessing Game</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/tictactoe/tictactoe.html'">Tic-Tac-Toe</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/simplyMe/simplyMe.html'">Simply Me</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/theCompany/theCompany.html'">The Company</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/theBand/theBand.html'">The Band</a>
+        </div>
+        
+        <!--Fifth container.-->
+        <div class="container-fluid bg-5 text-center">
+        <h3 id="2440">CSIS 2440 Work</h3>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/CSIS2440Course/Assignment1/WhoAmI.php'">Assignment 1</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/CSIS2440Course/Assignment2/FamilyForm.php'">Assignment 2</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/CSIS2440Course/ECommerce/Login.php'">E-Commerce Site</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/CSIS2440Course/index.php'">Classroom Exercise 1</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/CSIS2440Course/CE02.php'">Classroom Exercise 2</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/CSIS2440Course/CE03/CE03.php'">Classroom Exercise 3</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/CSIS2440Course/CE04/CE04.php'">Classroom Exercise 4</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/CSIS2440Course/CE06/CE06.php'">Classroom Exercise 6</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/CSIS2440Course/CE07/catagory.php'">Classroom Exercise 7</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/CSIS2440Course/CE08/MonsterInterface.php'">Classroom Exercise 8</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/CSIS2440Course/CE09/CE09.php'">Classroom Exercise 9</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/CSIS2440Course/CE11/CE11.php'">Classroom Exercise 11</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/CSIS2440Course/CE12/CE12.php'">Classroom Exercise 12</a>
+        <a href="#" class="btn btn-default btn-lg" onclick= "window.location.href='http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/CSIS2440Course/CE13/Login.php'">Classroom Exercise 13</a>
+        </div>
+        
+        <!--Sixth container.-->
+        <div class="container-fluid bg-6 text-center">
+            <h3 id="1430R">CSIS 1430 Reflection</h3>
+            <h2>For CSIS 1430, I learned about web development for the first time. In terms of skills,
+            HTML5, CSS3, Javascript, and Bootstrap were used to create client-side only web pages.
+            This course was an excellent introduction to web development, and the methodologies behind it.<br></br>
+            At first we started at basic HTML5 for our home page, resume, and Image Map,
+            but then used CSS to style our web pages. Later, we used Javascript
+            functions to handle the logic and interactivity of our code. This was useful for making random 
+            outcomes for the Guessing Game Assignment, with the help of bitwise operators for the 
+            Tic-Tac-Toe game.
+             The last three assignments used the CSS Bootrap framework to create web pages with an
+            emphasis on mobile site functionality, and user-friendly design. <br></br> At the end of the course,
+             I did feel I learned a great deal that could be expanded upon even more.
+            What served me well the most in this class was my eye for good web design.
+            I would spend some amount of time for each assignment, getting it to look as best as
+            possible. As a result, I feel very proud. Not just what I created, but of how much I 
+            learned in the process. Everything about this course was beneficial in one way or another, and
+            it's got me even more excited for what's to come in CSIS 2440.</h2>
+        </div>
+            
+        <!--Page footer.-->
+        <footer class="container-fluid bg-7 text-center">
+            <a href="#myPage" title="To Top">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+            <p style="font-weight: bold;">Made by
+                <a href="http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/simplyMe/simplyMe.html">Harrison Thacker</a></p>
+        </footer>
+        
+         <!--jQuery scroll code.-->
+        <script>
+$(document).ready(function(){
+  // Adds smooth scrolling to all links in navbar + footer link.
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+  // Makes sure this.hash has a value before overriding default behavior.
+  if (this.hash !== "") {
+
+    // Prevents default anchor click behavior.
+    event.preventDefault();
+
+    // Stores hash.
+    var hash = this.hash;
+
+    // Uses jQuery's animate() method to add smooth page scroll.
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area.
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      
+      window.location.hash = hash;
+      });
+    } 
+  });
+
+<!--Makes a smoother slide animation.-->
+(window).scroll(function() {
+  $(".slideanim").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide");
+    }
+  });
+});
+})
+</script>
+
+    </body>
+</html>
+

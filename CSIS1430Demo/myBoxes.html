@@ -1,0 +1,215 @@
+<html>
+    <!--Introduction to div elements using HTML5 and CSS3.-->
+    <head><title>My Boxes</title>
+        <style>
+            
+            /* Sets background color. */
+            body
+            {
+                background-color:#b5b7b8;
+            }
+            
+            /* Styles for the first box at the center of the page. */
+            div.box1
+            {
+                background-image: url(boxes.gif);
+                background-color:black;
+                background-repeat: no-repeat;
+                background-size: contain;
+                color:white;
+                border-style:groove;
+                border-color:blue;
+                margin:20px;
+                padding:20px;
+                height:150px;
+                width:212px;
+                position:absolute;
+                top:120px;
+                left:530px;        
+            }
+            
+            /* Sets styles for containter box left of the first GIF box. */
+            div.containerBox
+            {
+                background-color:#104040;
+                color:white;
+                border-style:solid;
+                border-color:black;
+                border-width:1px;
+                padding:25px;
+                position:float;
+                top:-7px;
+                left:-7px;
+                height:auto;
+                width:auto;
+            }
+            
+            /* Sets shadow for container box. */
+            div.shadowBox
+            {
+                background-color:#909090;
+                position:relative;
+                top:+7px;
+                left:+7px;
+                margin-bottom:5px;
+                margin-right:5px;
+                height:300px;
+                width:250px;
+            }    
+
+            /* CSS Styles for floating boxes. */
+            .floating-box 
+            {
+                position:relative;
+                float: left;
+                width: 150px;
+                height: 75px;
+                margin: 10px;
+                margin-bottom:5px;
+                margin-right:5px;
+                border: 3px solid cornflowerblue;
+                font-family: Verdana, sans-serif;
+                box-shadow: 10px 5px 10px #888888;
+            }
+
+            /* Sets background color. */
+            .after-box {
+                clear: left;
+                border: 3px solid #cc0099;
+                font-family: Verdana, sans-serif;
+            }
+            
+            /* CSS Styles for custom boxes. */
+            #custom{
+                border:10px solid #000;
+                border-radius: 10px 40px 40px 10px;
+                width: 400px;
+                height: 300px;
+                background-color:#ccc;
+                box-shadow: 10px 5px 10px #888888;
+                background-image: url(snakeBox.gif);
+            }
+            
+            /* CSS Styles for h1 headers. */
+            h1 {
+                padding: 1em;
+                color: black;
+                font-family: Verdana, sans-serif;
+                font-weight: bold;
+                text-decoration: underline;
+                background-color: #9999ff;
+                clear: left;
+                text-align: center;
+            }
+            
+            /* CSS Styles for home page link. */
+            a:link, a:visited {
+                background-color: purple;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-family: Verdana, sans-serif;
+            }
+
+            /* Style for footer. */
+            footer {
+                padding: 1em;
+                color: black;
+                background-color: #9999ff;
+                clear: left;
+                text-align: center;
+            }
+            
+            /* Sets link color to blue when clicked. */
+            a:hover, a:active {
+                background-color: blue;
+            }
+            
+            /* Sets style forr custom header. */
+            h2.Custom {
+                font-family: Verdana, sans-serif;
+                font-weight: bold;
+                text-decoration: underline;
+                text-align: center;
+            }
+            
+            /* Sets link at the center of the footer. */
+            a {
+                text-align: center;
+            }
+            
+            /* Sets style for Float header. */
+            h2.Float {
+                font-family: Verdana, sans-serif;
+                font-weight: bold;
+                text-decoration: underline;
+                text-align: center;
+                padding-top: 75px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <!--Web page Header.-->
+        <header>
+            <h1> Little Boxes </h1>
+        </header>
+        
+        <!--Box 1 div.-->
+        <div class='box1'>
+        </div>
+        
+        <!--Declares shadowBox and containerBox classes.-->
+        <div class='shadowBox' style="width:400; height:auto;">
+            <div class='containerBox' style="width:auto; height:auto;
+                 background-color:#104040">
+                
+                <!--Navigation elements.-->
+                <nav>
+                <ul>
+                    <li>CSIS1430 HTML</li>
+                    <li>CSIS1430 CSS</li>
+                    <li>CSIS1430 Javascript</li>
+                    <li>CSIS1430 Bootstrap</li>
+                    <li>CSIS1430 XML</li>
+                </ul>
+                </nav>
+            </div>    
+        </div>
+
+        <!--Floating Boxes header.-->
+        <h2 class="Float">FLOATING BOXES</h2>
+
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+        <div class="floating-box">Floating box</div>
+
+        <div class="after-box">Another box, after the floating boxes...</div>
+
+        <h2 class="Custom">Custom Boxes</h2>
+
+        <div class="after-box" id="custom"></div>
+        <div class="after-box" id="custom"></div>
+        <div class="after-box" id="custom"></div>
+
+        <!--Page footer.-->
+        <footer>
+        <a id="footer" href="http://ec2-18-221-10-213.us-east-2.compute.amazonaws.com/index_2.html">Back to Home Page</a>
+        </footer>
+        
+    </body>    
+</html>       
